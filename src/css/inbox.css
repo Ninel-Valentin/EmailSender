@@ -1,0 +1,79 @@
+table.inbox {
+    width: 80%;
+    margin: 0 10%;
+    border-collapse: collapse;
+    table-layout: fixed
+}
+
+table.inbox tr {
+    border-bottom: 1px solid var(--colors-green-level3);
+    box-shadow: 0 1px var(--colors-green-level3);
+    transition: box-shadow .5s;
+}
+
+table.inbox tr:hover {
+    cursor: pointer;
+    box-shadow: 0 0 1px var(--colors-green-level3);
+    transition: box-shadow .5s;
+}
+
+table.inbox td *:not(div.buttonsContainer>div) {
+    pointer-events: none;
+}
+
+div.buttonsContainer>div {
+    pointer-events: all;
+}
+
+div.tableDataContainer {
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+td[data-type="sender"] {
+    width: 10rem;
+}
+
+td[data-type="icon"] {
+    width: 7.5rem;
+}
+
+div.buttonsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.archive {
+    background-image: url('/public/storage/images/icons/archive.png');
+}
+
+.readEmail {
+    background-image: url('/public/storage/images/icons/readEmail.png');
+}
+
+.unreadEmail {
+    background-image: url('/public/storage/images/icons/unreadEmail.png');
+}
+
+.bin {
+    background-image: url('/public/storage/images/icons/bin.png');
+}
+
+div.buttonsContainer>div {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    transition: background-color .5s;
+}
+
+div.buttonsContainer>div:hover {
+    background-color: var(--colors-green-level0);
+    transition: background-color .5s;
+}

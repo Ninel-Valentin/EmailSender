@@ -1,0 +1,142 @@
+:root {
+    --colors-white-level0: #ffffff;
+    --colors-green-level0: #009C58;
+    --colors-green-level1: #007040;
+    --colors-green-level2: #004E2C;
+    --colors-green-level3: #003520;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* #region Menu */
+/* .navigation {
+    background-color: var(--colors-white-level0);
+    width: 100vw;
+}
+
+.navigation>ul {
+    background-color: var(--colors-green-level3);
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 5vh;
+}
+
+.navigation li {
+    width: 30%;
+    height: 100%;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: var(--colors-green-level3);
+    position: relative;
+    background-color: var(--colors-white-level0);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5rem;
+}
+
+.navigation a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--colors-green-level3);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.navigation a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+} */
+/* #endregion */
+
+div.routerContainer {
+    height: 100vh;
+    width: 90vw;
+    max-height: calc(100vw - 175);
+}
+
+nav.navigation {
+    background-image: linear-gradient(90deg, var(--colors-green-level0) 80%, transparent 20%);
+    height: 100vh;
+    width: 3vw;
+    overflow: hidden;
+}
+
+nav.navigation:hover {
+    width: 10vw;
+    overflow: visible;
+}
+
+nav.navigation svg {
+    height: 100%;
+    aspect-ratio: 1;
+}
+
+nav.navigation path {
+    fill: var(--colors-white-level0);
+}
+
+nav.navigation li a:hover path {
+    fill: var(--colors-green-level3);
+}
+
+nav.navigation>ul {
+    list-style-type: none;
+}
+
+nav.navigation li {
+    width: 10vw;
+    background-color: var(--colors-green-level3);
+    height: 3rem;
+    margin: .5rem 0;
+    border-radius: 0 0 25px 0;
+    transition:
+        background-color .3s,
+        box-shadow .3s,
+        width .3s,
+        color.3s;
+}
+
+nav.navigation li a {
+    color: var(--colors-white-level0);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5rem;
+    margin: 0 5%;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: color .3s;
+}
+
+nav.navigation li:has(a:hover) {
+    background-color: var(--colors-white-level0);
+    box-shadow: 0 0 1px 1px var(--colors-green-level3);
+    width: 120%;
+    transition:
+        background-color .3s,
+        box-shadow .3s,
+        width .3s,
+        color.3s;
+}
+
+nav.navigation li a:hover {
+    color: var(--colors-green-level3);
+    transition: color .3s;
+}
